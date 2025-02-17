@@ -59,7 +59,7 @@ function renderCarousel(banners) {
     function prevBanner() {
         showBanner(currentIndex - 1);
     }
-
+    
     // 添加轮播图切换逻辑
     carouselIndicators.addEventListener("click", (event) => {
         if (event.target.classList.contains("indicator")) {
@@ -197,7 +197,7 @@ function updateProgress() {
 function formatTime(seconds) {
     const minutes = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
-    return `${minutes}:${secs < 10 ? "0" + secs : secs}`;
+    return `${minutes}:${secs}`;
 }
 
 // 初始化页面
