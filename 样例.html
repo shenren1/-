@@ -9,53 +9,85 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo网易云.jpeg" alt="网易云音乐logo">
-        </div>
         <div class="user-info">
             <img src="logo网易云.jpeg" alt="头像" class="avatar">
             <span class="nickname">昵称</span>
         </div>
     </header>
 
-    <main>
-        <!-- 轮播图 -->
-        <section class="carousel">
-            <div class="carousel-container" id="carousel-container">
-                <!-- 动态加载轮播图 -->
-            </div>
-            <div class="carousel-indicators" id="carousel-indicators">
-                <!-- 动态加载指示器 -->
-            </div>
-        </section>
+    <div class="container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <div class="logo">
+                        <img src="logo网易云.jpeg" alt="网易云音乐logo">
+                    </div>
+                    <li><a href="#">精选</a></li>
+                    <li><a href="#">播客</a></li>
+                    <li><a href="#">关注</a></li>
+                    <li><a href="#">我喜欢的音乐</a></li>
+                    <li><a href="#">最近播放</a></li>
+                    <li><a href="#">本地音乐</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-        <!-- 推荐歌单 -->
-        <section class="recommend-playlists">
-            <h2>推荐歌单</h2>
-            <div class="playlists" id="recommend-playlists">
-                <!-- 动态加载推荐歌单 -->
-            </div>
-        </section>
+        <main>
+            <!-- 轮播图 -->
+            <section class="carousel">
+                <div class="carousel-container" id="carousel-container">
+                    <!-- 动态加载轮播图 -->
+                </div>
+                <div class="carousel-indicators" id="carousel-indicators">
+                    <!-- 动态加载指示器 -->
+                </div>
+            </section>
 
-        <!-- 歌单详情 -->
-        <section class="playlist-details" id="playlist-details">
-            <h2>歌单详情</h2>
-            <div class="playlist-info">
-                <h3 id="playlist-name"></h3>
-                <p id="playlist-description"></p>
-            </div>
-            <div class="playlist-tracks" id="playlist-tracks">
-                <!-- 动态加载歌曲列表 -->
-            </div>
-        </section>
+            <!-- 推荐歌单 -->
+            <section class="recommend-playlists">
+                <h2>推荐歌单</h2>
+                <div class="playlists" id="recommend-playlists">
+                    <!-- 动态加载推荐歌单 -->
+                </div>
+            </section>
 
-        <!-- 音乐播放器 -->
-        <section class="player">
-            <div class="audio-container">
-                <audio id="audioPlayer"  controls></audio>
+            <!-- 歌单详情 -->
+            <section class="playlist-details" id="playlist-details">
+                <h2>歌单详情</h2>
+                <div class="playlist-info">
+                    <h3 id="playlist-name"></h3>
+                    <p id="playlist-description"></p>
+                </div>
+                <div class="playlist-tracks" id="playlist-tracks">
+                    <!-- 动态加载歌曲列表 -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 音乐控制器 -->
+    <div class="music-controller">
+        <div class="controller-left">
+            <img src="logo网易云.jpeg" alt="专辑封面" class="album-cover">
+            <div class="track-info">
+                <h3 class="track-title" id="track-title"></h3>
+                <p class="track-artist" id="track-artist"></p>
             </div>
-        </section>
-    </main>
+        </div>
+        <div class="controller-center">
+            <button class="prev-button">上一首</button>
+            <button class="play-button">播放</button>
+            <button class="next-button">下一首</button>
+            <input type="range" id="progressRange" min="0" max="100" value="0">
+        </div>
+        <div class="controller-right">
+            <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+            音量<input type="range" id="volumeRange" min="0" max="100" value="100">
+        </div>
+    </div>
+
+    <audio id="audioPlayer"></audio>
 
     <script src="scripts.js"></script>
 </body>
