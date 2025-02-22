@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>网易云音乐</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="播放样式.css">
+    <link rel="stylesheet" href="侧边栏样式.css">
+    <link rel="stylesheet" href="顶部样式.css">
+    <link rel="stylesheet" href="歌单样式.css">
+    <link rel="stylesheet" href="轮播图样式.css">
     <link rel="icon" href="logo网易云.jpeg" type="image/jpeg" sizes="30x16">
 </head>
 <body>
@@ -63,7 +68,7 @@
                     <!-- 动态加载歌曲列表 -->
                 </div>
             </section>
-        </main>
+        
     </div>
 
     <!-- 音乐控制器 -->
@@ -83,12 +88,11 @@
         </div>
         <div class="controller-right">
             <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
-            音量<input type="range" id="volumeRange" min="0" max="100" value="100">
+            <button class="volume-button">音量</button><input type="range" id="volumeRange" min="0" max="100" value="100">
         </div>
     </div>
-
     <audio id="audioPlayer"></audio>
-
+</main>
     <script src="scripts.js"></script>
 </body>
 </html>

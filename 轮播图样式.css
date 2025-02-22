@@ -1,0 +1,48 @@
+/*轮播图样式*/
+.carousel {
+    position: relative;
+    margin: 20px;
+    margin-top: 80px; /* 确保 carousel 不被 header 遮挡 */
+}
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-indicators .indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators .indicator.active {
+    background-color: #c20c0c;
+}

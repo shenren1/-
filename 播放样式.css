@@ -1,0 +1,128 @@
+/*音乐控制器之播放样式*/
+.track-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.track-item:hover {
+    background-color: #f5f5f5;
+}
+
+.track-item span {
+    font-size: 14px;
+    color: #666;
+}
+
+.track-info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.track-info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.track-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+/*音乐控制器之底部样式*/
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.audio-container {
+    margin-bottom: 20px;
+    position: fixed;
+}
+
+.music-controller {
+    position: fixed;
+    bottom: 0;
+    left:300px; /* 确保音乐控制器从侧边栏右边开始 */
+    width: calc(100% - 380px); /* 确保音乐控制器占满侧边栏右边的宽度 */
+    height: 40px;
+    background-color: #f7f3f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* 确保音乐控制器在其他元素之上 */
+}
+.music-controller .controller-left,
+.music-controller .controller-center,
+.music-controller .controller-right {
+    display: flex;
+    align-items: center;
+}
+
+.music-controller .controller-left {
+    flex: 1;
+}
+
+.music-controller .controller-center {
+    flex: 2;
+    justify-content: center;
+}
+
+.music-controller .controller-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.music-controller .album-cover {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.music-controller .track-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.music-controller .track-title {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+.music-controller .track-artist {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+.music-controller .prev-button,
+.music-controller .play-button,
+.music-controller .next-button,
+.music-controller .volume-button {
+    background-color: #c20c0c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.music-controller .prev-button:hover,
+.music-controller .play-button:hover,
+.music-controller .next-button:hover,
+.music-controller .volume-button:hover {
+    background-color: #a00a0a;
+}
+
+.music-controller input[type="range"] {
+    width: 100%;
+    margin: 0 10px;
+}

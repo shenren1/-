@@ -1,0 +1,37 @@
+/*顶部样式*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f7f3f3;
+    position: fixed; 
+    top: 0;
+    left: 300px;;
+    z-index:1000;
+    width:calc(100% - 350px); /* 减去侧边栏的宽度 */
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+header .user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+header .user-info .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+header .user-info .nickname {
+    font-size: 16px;
+    color: #827f7f;
+}

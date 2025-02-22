@@ -130,8 +130,6 @@ function renderPlaylistDetails(playlist) {
     const playlistName = document.getElementById("playlist-name");
     const playlistDescription = document.getElementById("playlist-description");
     const playlistTracks = document.getElementById("playlist-tracks");
-    const name =document.getElementById("track-title");
-    const artist = document.getElementById("track-artist");
     playlistName.textContent = playlist.name;
     playlistDescription.textContent = playlist.description;
     playlistTracks.innerHTML = "";
@@ -156,8 +154,6 @@ function renderPlaylistDetails(playlist) {
 
         // 添加点击事件，播放歌曲
         trackItem.addEventListener("click", () => {
-            name.textContent = track.name;
-            artist.textContent = artistsNames;
             currentTrackIndex = index;
             playSong(track.id);
         });
@@ -167,11 +163,16 @@ function renderPlaylistDetails(playlist) {
 // 播放歌曲
 async function playSong(songId) {
     try {
+        const track = playlist[currentTrackIndex];
+        const artistsNames = track.ar && track.ar.map(artist => artist.name).join(", ");
+        const name =document.getElementById("track-title");
+        const artist = document.getElementById("track-artist");
         const response = await fetch(`${API_BASE_URL}/song/url?id=${songId}`);
         const data = await response.json();
         if (data.data && data.data.length > 0 && data.data[0].url) {
             const songUrl = data.data[0].url;
-
+            name.textContent = track.name;
+            artist.textContent = artistsNames;
             const audioPlayer = document.getElementById("audioPlayer");
             audioPlayer.src = songUrl;
             audioPlayer.play();

@@ -1,0 +1,71 @@
+/*歌单样式*/
+.recommend-playlists {
+    margin: 20px;
+}
+
+.playlists {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.playlist-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.playlist-item:hover {
+    transform: translateY(-5px);
+}
+
+.playlist-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+}
+
+.playlist-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.playlist-info h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.playlist-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.playlist-details {
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.playlist-details h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #c20c0c;
+}
+
+.playlist-details .playlist-info {
+    margin-bottom: 20px;
+}
+
+.playlist-details .playlist-tracks {
+    display: flex;
+    flex-direction: column;
+}
